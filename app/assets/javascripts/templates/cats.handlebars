@@ -1,23 +1,25 @@
-<h1>Cats</h1>
+<div class='span6'>
+  <h1>Cats</h1>
 
-<p>Your content here.</p>
+  <p>Here are three different ways to display a list of models</p>
 
-<h2>Each cat in model</h2>
+  <h2>each cat in model</h2>
 
-{{#each cat in model}}
-  {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
-{{/each}}
+  {{#each cat in model}}
+    {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
+  {{/each}}
 
-<h2>Each cat in controller</h2>
+  <h2>each cat in controller</h2>
 
-{{#each cat in controller}}
-  {{ cat }}
-{{/each}}
+  {{#each cat in controller}}
+    {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
+  {{/each}}
 
-<h2>Each "model"</h2>
+  <h2>each model</h2>
 
-{{#each model}}
-  {{#linkTo 'cat' this}}{{ breed }}{{/linkTo}}
-{{/each}}
+  {{#each model}}
+    {{#linkTo 'cat' this}}{{ breed }}{{/linkTo}}
+  {{/each}}
+</div>
 
 {{outlet}}
