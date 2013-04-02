@@ -1,0 +1,21 @@
+<h1>Cats</h1>
+
+<p>Your content here.</p>
+
+{{#each model}}
+  {{ age }}
+{{/each}}
+
+<h2>Each cat in model</h2>
+
+{{#each cat in model}}
+  {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
+{{/each}}
+
+<h2>Each cat in controller</h2>
+
+{{#each cat in controller}}
+  {{ cat }}
+{{/each}}
+
+{{outlet}}
