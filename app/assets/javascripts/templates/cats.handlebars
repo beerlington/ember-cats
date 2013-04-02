@@ -2,10 +2,6 @@
 
 <p>Your content here.</p>
 
-{{#each model}}
-  {{ age }}
-{{/each}}
-
 <h2>Each cat in model</h2>
 
 {{#each cat in model}}
@@ -16,6 +12,12 @@
 
 {{#each cat in controller}}
   {{ cat }}
+{{/each}}
+
+<h2>Each "model"</h2>
+
+{{#each model}}
+  {{#linkTo 'cat' this}}{{ breed }}{{/linkTo}}
 {{/each}}
 
 {{outlet}}
