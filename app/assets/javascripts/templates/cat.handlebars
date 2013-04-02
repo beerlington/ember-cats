@@ -1,7 +1,21 @@
 <div class='span6'>
   <h1>Cat #{{ id }}</h1>
 
-  <p>Viewing cat: {{ breed }}</p>
+  <p>
+  {{#if isEditing}}
+    {{ view Ember.TextField valueBinding='breed' }}
+  {{else}}
+    Viewing cat: {{ breed }}
+  {{/if}}
+  </p>
+
+  <button {{ action toggleEdit }}>
+    {{#if isEditing}}
+      Done
+    {{else}}
+      Edit Cat # {{ id }}
+    {{/if}}
+  </button>
 
   {{outlet}}
 </div>
