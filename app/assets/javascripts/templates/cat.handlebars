@@ -1,23 +1,21 @@
 <div class='span6'>
-  <h1>Cat #{{ id }}</h1>
+  <h1>{{ breed }}</h1>
+
+  <p>
+    <img {{ bindAttr src="imageUrl"}}>
+  </p>
 
   <p>
     {{#if isEditing}}
       {{ view Ember.TextField valueBinding='breed' }}
-    {{else}}
-    Viewing cat: <span {{action toggleEdit}}>{{ breed }}</span>
     {{/if}}
-  </p>
-
-  <p>
-    <img {{ bindAttr src="imageUrl"}}>
   </p>
 
   <button class='btn btn-small' {{ action toggleEdit }}>
     {{#if isEditing}}
       Done
     {{else}}
-      Edit Cat # {{ id }}
+      Edit {{ name }}
     {{/if}}
   </button>
 </div>

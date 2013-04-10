@@ -13,3 +13,10 @@ a.active {
   background-color: yellow
 }
 
+img {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  margin: 0 auto 15px auto;
+}
