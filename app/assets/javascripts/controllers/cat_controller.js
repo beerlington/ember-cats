@@ -3,6 +3,7 @@ EmberCats.CatController = Ember.ObjectController.extend({
 
   toggleEdit: function() {
     this.toggleProperty('isEditing');
+    this.store.commit();
   }
 
 });
