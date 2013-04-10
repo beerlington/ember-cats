@@ -5,7 +5,7 @@
     {{#if isEditing}}
       {{ view Ember.TextField valueBinding='breed' }}
     {{else}}
-      Viewing cat: {{ breed }}
+    Viewing cat: <span {{action toggleEdit}}>{{ breed }}</span>
     {{/if}}
   </p>
 
@@ -13,7 +13,7 @@
     <img {{ bindAttr src="imageUrl"}}>
   </p>
 
-  <button {{ action toggleEdit }}>
+  <button class='btn btn-small' {{ action toggleEdit }}>
     {{#if isEditing}}
       Done
     {{else}}
