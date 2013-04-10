@@ -4,5 +4,5 @@ EmberCats.Cat = DS.Model.extend({
 
   imageUrl: function() {
     return '/images/' + this.get('image');
-  }.property()
+  }.property('image')
 });
