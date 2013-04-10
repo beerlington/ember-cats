@@ -1,4 +1,8 @@
 EmberCats.Cat = DS.Model.extend({
-  age: DS.attr('number'),
-  breed: DS.attr('string')
+  image: DS.attr('string'),
+  breed: DS.attr('string'),
+
+  imageUrl: function() {
+    return '/images/' + this.get('image');
+  }.property()
 });

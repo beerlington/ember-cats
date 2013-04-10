@@ -5,7 +5,11 @@ body {
   margin: 0 auto;
 }
 
+a {
+  padding: 4px;
+  margin: 4px;
+}
 a.active {
-  background-color: #ddd
+  background-color: yellow
 }
 

@@ -1,3 +1,3 @@
 class Cat < ActiveRecord::Base
-  attr_accessible :age, :breed
+  attr_accessible :image, :breed
 end

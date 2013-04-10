@@ -1,3 +1,3 @@
 class CatSerializer < ActiveModel::Serializer
-  attributes :id, :age, :breed
+  attributes :id, :image, :breed
 end

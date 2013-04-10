@@ -1,19 +1,14 @@
 <div class='span6'>
-  <h1>Cats</h1>
+  <h1>All the Cats</h1>
 
-  <p>Here are three different ways to display a list of models</p>
+  <ul>
+    {{#each cat in controller}}
+    <li>
+      {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
+    </li>
+    {{/each}}
+  </ul>
 
-  <h2>each cat in controller</h2>
-
-  {{#each cat in controller}}
-    {{#linkTo 'cat' cat}}{{ cat.breed }}{{/linkTo}}
-  {{/each}}
-
-  <h2>each model</h2>
-
-  {{#each model}}
-    {{#linkTo 'cat' this}}{{ breed }}{{/linkTo}}
-  {{/each}}
 </div>
 
 {{outlet}}

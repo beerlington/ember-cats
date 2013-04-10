@@ -1,15 +1,21 @@
 Cat.destroy_all
-Dog.destroy_all
 
-Cat.create!(
-  age: 5,
-  breed: 'Persian'
-)
 
-Cat.create!(
-  age: 4,
-  breed: 'Alley'
-)
+cats = [
+  'Main Coon',
+  'Persian',
+  'Siamese',
+  'Bengal',
+  'Savannah',
+  'Ragdoll'
+]
+
+cats.each do |cat|
+  Cat.create!(
+    breed: cat,
+    image: "#{cat.underscore}.png"
+  )
+end
 
 Dog.create!(
   age: 4,

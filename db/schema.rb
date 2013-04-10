@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(:version => 20130407164945) do
 
   create_table "cats", :force => true do |t|
-    t.integer  "age"
     t.string   "breed"
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

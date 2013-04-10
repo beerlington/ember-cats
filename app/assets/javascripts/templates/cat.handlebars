@@ -2,11 +2,15 @@
   <h1>Cat #{{ id }}</h1>
 
   <p>
-  {{#if isEditing}}
-    {{ view Ember.TextField valueBinding='breed' }}
-  {{else}}
-    Viewing cat: {{ breed }}
-  {{/if}}
+    {{#if isEditing}}
+      {{ view Ember.TextField valueBinding='breed' }}
+    {{else}}
+      Viewing cat: {{ breed }}
+    {{/if}}
+  </p>
+
+  <p>
+    <img {{ bindAttr src="imageUrl"}}>
   </p>
 
   <button {{ action toggleEdit }}>
@@ -16,6 +20,4 @@
       Edit Cat # {{ id }}
     {{/if}}
   </button>
-
-  {{outlet}}
 </div>
